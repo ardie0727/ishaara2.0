@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import heroimg from './../../assets/images/hero.png';
-import './../../assets/css/element.css';
+import heroimg from './../../../public/assets/images/hero.png';
+import './../../../public/assets/css/element.css';
 const Hero = () => {
   return (
     <section id="hero">

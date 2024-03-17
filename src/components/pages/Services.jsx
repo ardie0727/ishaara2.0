@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
-import Example from './../../assets/images/example.png'
-import Arrow from '../Arrow'
+import Example from './../../../public/assets/images/example.png'
+import Arrow from './../Arrow'
 // import Example1 from './../assets/example1.png'
 // import Example2 from './../assets/example2.png'
 export default function Services() {

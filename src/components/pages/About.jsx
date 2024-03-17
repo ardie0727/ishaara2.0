@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
-// import Rehan from './../assets/team/rehan.jpg';
+// import Rehan from './../../../assets/team/rehan.jpg';
 // import Salman from './../assets/team/salman.png';
 // import Sahuf from './../assets/team/sahuf.jpg';
 
