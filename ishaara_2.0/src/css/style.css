@@ -240,3 +240,70 @@ body {
     } 
   }
   
+  .onbtn{
+    margin-top: 800px;
+    font-size:2rem;
+    font-family: sans-serif;
+    color:Black;
+    border:none;
+    border-radius:5px; 
+    background-color: transparent; 
+  }
+  
+  .onta{
+    background-color: rgba(39, 38, 38, 0.999);
+    font-size:2rem;
+    margin-top: 890px;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+  }
+  @media (max-width:1000px) {
+    .onbtn{
+      margin-top: 800px;
+    }
+    .onta{
+      margin-top: 890px;
+      
+    }
+  }
+  @media (max-width:900px) {
+    .onbtn{
+      margin-top: 700px;
+    }
+    .onta{
+      margin-top: 790px;
+    }
+  }
+  @media (max-width:800px) {
+    .onbtn{
+      margin-top: 600px;
+    }
+    .onta{
+      margin-top: 690px;
+    }
+  }
+  @media (max-width:700px) {
+    .onbtn{
+      margin-top: 550px;
+    }
+    .onta{
+      margin-top: 640px;
+    }
+  }
+  @media (max-width:600px) {
+    .onbtn{
+      margin-top: 450px;
+    }
+    .onta{
+      margin-top: 540px;
+    }
+  }
+  @media (max-width:500px) {
+    .onbtn{
+      margin-top: 400px;
+    }
+    .onta{
+      margin-top: 490px;
+    }
+  }
+  

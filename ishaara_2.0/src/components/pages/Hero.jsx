@@ -2,8 +2,9 @@
 import React from 'react';
 import heroimg from './../../assets/hero.png';
 import './../../css/style.css';
+import { Link } from 'react-router-dom'
 
-
+import {Counter,Services,Features,Try,About} from "./";
 const Hero = () => {
   return (
     <section
@@ -50,10 +51,10 @@ const Hero = () => {
                 alignItems: 'center',
               }}
             >
-              <button className='get'
-              >
-                Get Started
-              </button>
+              
+                <Link to='/Translate'><button className='get'
+              >Get Started</button></Link>
+              
             </div>
           </div>
           <div style={{ flex: 1 }}>
@@ -70,7 +71,13 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <Counter />
+    <Services/>
+    <Features/>
+    <Try />
+    <About/>
     </section>
+    
   );
 };
 
