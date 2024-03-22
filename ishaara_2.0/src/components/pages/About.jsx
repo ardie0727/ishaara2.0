@@ -1,43 +1,64 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
-// import Rehan from './../../assets/example.png';
-// import Salman from './../assets/team/salman.png';
-// import Sahuf from './../assets/team/sahuf.jpg';
+import React from 'react';
+import Vivek from './../../assets/Vivek.jpg';
+import Rehan from './../../assets/Rehan.jpg';
+import Rohit from './../../assets/Rohit.jpg';
+import Nishi from './../../assets/Nishi.jpg';
+import './../../css/style.css';
 
-export default function About() {
+const About = () => {
   return (
-    <section id="team">
-    <div style={{ marginTop: '85px',fontFamily: 'Inter' }}>
-        <div style={{ textAlign: 'center', fontSize: '35px', color: 'black', marginBottom:'20px'}}>
-            Meet our Team
+    <div className="container" style={{ marginTop: '30px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div className="about-title-heading">
+        Meet our Team
+      </div>
+      <div className="row" style={{ display: 'flex', justifyContent: 'center' }}>
+      <div className="about-card">
+          <div className="about-card-body">
+            <h4 className="about-card-title">Full Stack Developer</h4>
+            <div className="about-card-image">
+              <img src={Vivek} style={{ maxWidth: '22.5vw', maxHeight: '37.5vh', borderRadius: '6px' }} alt="Team member" />
+            </div>
+            <h4 className="about-card-title">Vivek Chouhan</h4>
+            <p className="about-card-text">Coding like poetry should be short and concise.</p>
+          </div>
         </div>
-        {/* <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px'}}> */}
-            {/* Card 1*/}
-            {/* <div style={{ width: '220px', height: '270px', background: 'aliceblue', borderRadius: '7px', textAlign: 'center', padding: '20px', marginRight:'20px'}}>
-                <img src={Rehan} style={{ width: '163px', height: '163px', marginBottom: '20px', borderRadius:'10px' }} alt="team image" />
-                <div style={{ color: 'black', fontSize: '17px', fontWeight: '700', marginBottom: '20px' }}>Rehan Sayyed</div>
-                <div style={{ color: '#808080', fontSize: '13px', fontWeight: '600', marginBottom: '20px' }}>Full Stack Developer</div>
-            </div> */}
-            {/* Card 2*/}
-            {/* <div style={{ width: '220px', height: '270px', background: 'aliceblue', borderRadius: '7px', textAlign: 'center', padding: '20px', margin: '0 20px' }}>
-                <img src={Vivek} style={{ width: '163px', height: '163px', marginBottom: '20px' , borderRadius:'10px' }} alt="team image" />
-                <div style={{ color: 'black', fontSize: '17px', fontWeight: '700', marginBottom: '20px' }}>Sahuf Shaikh</div>
-                <div style={{ color: '#808080', fontSize: '13px', fontWeight: '600', marginBottom: '20px' }}>Backend Developer</div>
-            </div> */}
-            {/* Card 3*/}
-            {/* <div style={{ width: '220px', height: '270px', background: 'aliceblue', borderRadius: '7px', textAlign: 'center', padding: '20px',marginLeft:'20px' }}>
-                <img src={Nishikant} style={{ width: '163px', height: '163px', marginBottom: '20px', borderRadius:'10px'  }} alt="team image" />
-                <div style={{ color: 'black', fontSize: '17px', fontWeight: '700', marginBottom: '20px' }}>Salman Shaikh</div>
-                <div style={{ color: '#808080', fontSize: '13px', fontWeight: '600', marginBottom: '20px' }}>Full Stack Developer</div>
-            </div> */}
-             {/* Card 4*/}
-             {/* <div style={{ width: '220px', height: '270px', background: 'aliceblue', borderRadius: '7px', textAlign: 'center', padding: '20px',marginLeft:'20px' }}>
-                <img src={Rohit} style={{ width: '163px', height: '163px', marginBottom: '20px', borderRadius:'10px'  }} alt="team image" />
-                <div style={{ color: 'black', fontSize: '17px', fontWeight: '700', marginBottom: '20px' }}>Salman Shaikh</div>
-                <div style={{ color: '#808080', fontSize: '13px', fontWeight: '600', marginBottom: '20px' }}>Full Stack Developer</div>
-            </div> */}
-        {/* </div> */}
+
+        <div className="about-card">
+          <div className="about-card-body">
+            <h4 className="about-card-title">Full Stack Developer</h4>
+            <div className="about-card-image">
+              <img src={Rehan} style={{ maxWidth: '22.5vw', maxHeight: '37.5vh', borderRadius: '6px' }} alt="Team member" />
+            </div>
+            <h4 className="about-card-title">Rehan Sayyed</h4>
+            <p className="about-card-text">Experience is the name everyone gives to their mistakes.</p>
+          </div>
+        </div>
+
+        <div className="about-card">
+          <div className="about-card-body">
+            <h4 className="about-card-title">Full Stack Developer</h4>
+            <div className="about-card-image">
+              <img src={Nishi} style={{ maxWidth: '22.5vw', maxHeight: '37.5vh', borderRadius: '6px' }} alt="Team member" />
+            </div>
+            <h4 className="about-card-title">Nishikant Raut</h4>
+            <p className="about-card-text">Of course, bad code can be cleaned up. But it’s very expensive.</p>
+          </div>
+        </div>
+
+        <div className="about-card">
+          <div className="about-card-body">
+            <h4 className="about-card-title">Full Stack Developer</h4>
+            <div className="about-card-image">
+              <img src={Rohit} style={{ maxWidth: '22.5vw', maxHeight: '37.5vh', borderRadius: '6px' }} alt="Team member" />
+            </div>
+            <h4 className="about-card-title">Rohit Deshmukh</h4>
+            <p className="about-card-text">Code is like humor. When you have to explain it, it’s bad. </p>
+          </div>
+        </div>
+      </div>
     </div>
-    </section>
-  )
+  );
 }
+
+export default About;

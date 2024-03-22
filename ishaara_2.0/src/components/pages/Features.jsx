@@ -17,7 +17,7 @@ export default function Features() {
         </div>
 
         <div style={{ marginTop: '1.6%' }}>
-          <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(30%, 1fr))', gap: '5%', listStyle: 'none', padding: 0, margin: 0}}>
+        <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.6rem', listStyle: 'none', padding: 0, margin: 0 }}>
             <li style={{ marginTop: '1.6%' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '1.2%', backgroundColor: '#fff' }}>
                 <img src={F1} alt="Description of your image" style={{ height: '60px', width: '60px', margin: '0.8rem' }} />

@@ -1,39 +1,39 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import heroimg from './../../assets/hero.png';
-import './../../css/element.css';
+import './../../css/style.css';
+
 
 const Hero = () => {
   return (
     <section
       id="hero"
       style={{
-        display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         maxHeight: '80%',
-        marginBottom:'18vh'
+        marginBottom: '21vh',
       }}
     >
       <div style={{ padding: '3.5%' }}>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            marginLeft: '1.5%',
-            marginRight: '1.5%'
-          }}
+        <div className='wrapper'
         >
           {/* wrapper */}
-          <div style={{ flex: 1, marginTop: '2%', fontFamily: 'Inter' }}>
+          <div
+            style={{
+              flex: 1,
+              marginTop: '2%',
+              fontFamily: 'Inter',
+            }}
+          >
             <p
               style={{
-                fontSize: '200%',
+                fontSize: '2rem',
                 marginTop: '20%',
                 marginLeft: '2%',
                 fontWeight: '300',
                 color: '#808080',
-                textAlign: 'left'
+               
               }}
             >
               Convert Indian Sign Language
@@ -43,9 +43,17 @@ const Hero = () => {
             </p>
             <div
               className="wrap"
-              style={{ marginTop: '3%', marginRight: '19vw',display:'flex' ,alignItems:'center'}}
+              style={{
+                marginTop: '3%',
+                marginRight: '19vw',
+                display: 'flex',
+                alignItems: 'center',
+              }}
             >
-              <button className="get">Get Started</button>
+              <button className='get'
+              >
+                Get Started
+              </button>
             </div>
           </div>
           <div style={{ flex: 1 }}>
@@ -55,7 +63,7 @@ const Hero = () => {
                 maxWidth: '100%',
                 maxHeight: 'auto',
                 borderTopRightRadius: '100px',
-                marginTop: '-10px'
+                marginTop: '-10px',
               }}
               alt="Your Image"
             />
