@@ -7,10 +7,6 @@ import './../../css/style.css'
 const Navbar = () => (
 <header className='navbar'>
         <div className='title item'><a href="#hero">Ishaara AI</a></div>
-        <div className='item'><a href="#count">Count</a></div>
-        <div className='item'><a href="#mission">Mission</a></div>
-        <div className='item'><a href="#about">About</a></div>
-        <div className='item'><a href="#translate">Translate</a></div>
     </header>
 );
 export default Navbar;
