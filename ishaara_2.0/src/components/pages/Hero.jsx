@@ -24,7 +24,6 @@ const Hero = () => {
           <div
             style={{
               flex: 1,
-              marginTop: '2%',
               fontFamily: 'Inter',
             }}
           >
@@ -53,8 +52,7 @@ const Hero = () => {
               }}
             >
               
-                <Link className="get_tlink" to='/Translate'><button className='get'
-              >Get Started</button></Link>
+                <Link className="get_tlink" to='/Translate'><button className='get'>Get <span>Started</span></button></Link>
               
             </div>
           </div>
