@@ -4,6 +4,7 @@ import heroimg from './../../assets/hero.png';
 import './../../css/style.css';
 import { Link } from 'react-router-dom'
 
+
 import {Counter,Services,Features,Try,About} from "./";
 const Hero = () => {
   return (
@@ -52,7 +53,7 @@ const Hero = () => {
               }}
             >
               
-                <Link to='/Translate'><button className='get'
+                <Link className="get_tlink" to='/Translate'><button className='get'
               >Get Started</button></Link>
               
             </div>

@@ -297,6 +297,13 @@ body {
     .onta{
       margin-top: 540px;
     }
+    .get_tlink{
+      margin-left: 40px;
+    }
+    .get{
+      padding-inline:30px;
+      border-radius: 50px;
+    }
   }
   @media (max-width:500px) {
     .onbtn{
@@ -305,5 +312,17 @@ body {
     .onta{
       margin-top: 490px;
     }
+    .get_tlink{
+      margin-left: 44px;
+      
+    }
   }
-  
+  @media (max-width:450px) {
+    .get_tlink{
+      margin-left: 10px;
+    }
+    .get{
+      padding-inline:30px;
+      border-radius: 50px;
+    }
+  }
