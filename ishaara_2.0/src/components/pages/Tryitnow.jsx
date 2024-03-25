@@ -7,7 +7,7 @@ export default function Tryitnow() {
     <section id="try">
     <div style={{ fontFamily: 'Inter' }}>
       <div style={{ textAlign: 'center', fontSize: '55px', color: '#33D9E3', marginBottom:'20px'}}>
-          <Link  style={{textDecoration:'none'}} to='/Translate' >TRY IT NOW</Link>        
+          <Link  style={{textDecoration:'none', color:'red'}} to='/Translate' ><span style={{color:'black'}}>TRY</span> IT NOW</Link>        
       </div>
     </div>
     </section>

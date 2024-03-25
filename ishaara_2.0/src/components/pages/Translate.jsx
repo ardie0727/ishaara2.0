@@ -9,14 +9,18 @@ function Translate() {
   
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
-  const [btn, setBtn] = useState(true);
+  const [rbtn, setRbtn]=useState(false)
   const [str, setStr]=useState("");
-  const id = useRef(null);
+  const id = useRef();
+  const btn = useRef(false);
   const [responser, setResponse] = useState(null);
 
   let chatsentences=[]
 
   const chatgpt = async (words) => {
+    if (btn.current==false){
+      return;
+    }
     const prompt = `Try to use these words and phrases to create a full sentence : ${words} exclude blanks`;
     const apiKey = import.meta.env.VITE_REACT_APP_C_KEY; 
   
@@ -50,19 +54,6 @@ function Translate() {
     }
   };
   
-  const containerStyle = {
-    position: "absolute",
-    marginLeft: "auto",
-    marginRight: "auto",
-    padding:20,
-    left: 0,
-    right:0,
-    zIndex:9,
-    textAlign: "center",
-    width: '100%',
-    maxWidth: '1000px',
-    height: 'auto'
-  };
 let holistic;
   useEffect(() => {
     holistic = new Holistic({
@@ -86,19 +77,24 @@ let holistic;
       width: 640,
       height: 480,
     });
-    camera.start();
+    camera.start()
   }, []);
 
-const start = () => {   
-    setBtn(false);
-    id.current = setInterval(holistic.onResults(onResults), 1);
+  const start = () => {   
+    setRbtn(true)
+    btn.current = !btn.current;
+    console.log(btn.current);
+    id.current = setInterval(
+        holistic.onResults(onResults),1
+    );
 };
 
 const stop =  () => { 
-    setBtn(true)
-    clearInterval(id.current)
-    
-  };
+    setRbtn(false)
+    btn.current = !btn.current;
+    console.log(btn.current);
+    clearInterval(id.current);
+};
 
 let frames=[]
 let sentences=[]
@@ -135,7 +131,9 @@ let count=0
     const cat = pose.concat(face, lh, rh);
     
     frames.push(cat)      
-    
+    if (btn.current==false){
+      return;
+    }
     if (frames.length === 30) {
       const formdata = new FormData();
       formdata.append("vector", JSON.stringify(frames));
@@ -163,20 +161,14 @@ let count=0
 
   return (
     <>
-    <div className="App" >
-      <div className='Video'>
-      <Webcam ref={webcamRef} style={containerStyle} /> 
-      <canvas ref={canvasRef} style={containerStyle} />
-      </div>
-      <button className='onbtn'style={{padding:10, cursor: 'pointer',width:'100%', maxWidth: '400px', marginInline:'auto',position:'absolute', left:0, right:0}} onClick={btn ? start : stop}>{btn ? "Start" : 'Stop'}</button>
-      <div >
-      <textarea className='onta' style={{ height:400,padding:10, cursor: 'pointer',width:'100%', maxWidth: '970px', marginInline:'auto',position:'absolute', left:0, right:0}} placeholder='Translation...'>{responser}</textarea>
-      </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+    <div className="Videol" >
+      <div className="camera">
+      <Webcam className='cam' ref={webcamRef}  /> 
+      <canvas className='cam' ref={canvasRef}  />   
+      </div>  
+      <textarea className='onta' placeholder='Translation...' defaultValue={responser}></textarea>
     </div>
+      <button className='onba' onClick={btn.current ? stop : start}>{rbtn ? "Stop" : "Start"}</button>    
     </>
   );
 }

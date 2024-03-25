@@ -98,12 +98,13 @@ body {
     outline: none;
     }
   
-  .get:hover {
+  .get:hover{
     background-color: red;
     box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
     color: #fff;
-    transform: translateY(-7px);
+    transform: translateY(-7px); 
   }
+  
   
   .wrapper{
     flex-direction: row;
@@ -118,7 +119,7 @@ body {
     display: flex; 
     justify-content: center; 
     margin-top: 1vh;
-    gap: 5rem;
+    gap: 10rem;
   }
 
   /*Services*/
@@ -154,7 +155,12 @@ body {
       margin-bottom:1.2%;
       margin-left:3.2%;
   }
-
+  #count{
+    margin-top: 300px;
+  }
+  #hero{
+    margin-top:80px;
+  }
   @media only screen and (max-width: 576px) {
     .about-card {
       max-width: 100%;
@@ -187,6 +193,7 @@ body {
       flex-direction: column;
       align-items: center; 
       justify-content: center;
+      
     }
   
     .wrapper {
@@ -217,9 +224,10 @@ body {
       box-shadow: none; 
       transform: none; 
     }
-  
+    
     .c-wrapper{
       flex-direction: column;
+      
     }
      .s-container{
         flex-direction: column;
@@ -239,64 +247,9 @@ body {
       font-size: 2.2rem;
     } 
   }
-  
-  .onbtn{
-    margin-top: 800px;
-    font-size:2rem;
-    font-family: sans-serif;
-    color:Black;
-    border:none;
-    border-radius:5px; 
-    background-color: transparent; 
-  }
-  
-  .onta{
-    background-color: rgba(39, 38, 38, 0.999);
-    font-size:2rem;
-    margin-top: 890px;
-    font-family: sans-serif;
-    margin-bottom: 20px;
-  }
-  @media (max-width:1000px) {
-    .onbtn{
-      margin-top: 800px;
-    }
-    .onta{
-      margin-top: 890px;
-      
-    }
-  }
-  @media (max-width:900px) {
-    .onbtn{
-      margin-top: 700px;
-    }
-    .onta{
-      margin-top: 790px;
-    }
-  }
-  @media (max-width:800px) {
-    .onbtn{
-      margin-top: 600px;
-    }
-    .onta{
-      margin-top: 690px;
-    }
-  }
-  @media (max-width:700px) {
-    .onbtn{
-      margin-top: 550px;
-    }
-    .onta{
-      margin-top: 640px;
-    }
-  }
+
   @media (max-width:600px) {
-    .onbtn{
-      margin-top: 450px;
-    }
-    .onta{
-      margin-top: 540px;
-    }
+    
     .get_tlink{
       margin-left: 40px;
     }
@@ -306,12 +259,6 @@ body {
     }
   }
   @media (max-width:500px) {
-    .onbtn{
-      margin-top: 400px;
-    }
-    .onta{
-      margin-top: 490px;
-    }
     .get_tlink{
       margin-left: 44px;
       
@@ -326,3 +273,101 @@ body {
       border-radius: 50px;
     }
   }
+  @media(min-width:1400px){
+    .wrapper{
+      margin-left: 14%;
+    }
+  }
+
+.Videol{
+  display:flex;
+  gap: 20px;
+  width: 100%;
+}
+.camera{
+  width: 100%;
+  max-width: 1100px;
+  height: 750px;
+}
+.cam{
+    position: absolute;
+    left: 40px;
+    z-index:9;
+    text-align: center;
+    width: 85%;
+    max-width: 1000px;
+    height:auto;
+}
+.onta{
+  width:100%;
+  max-width:800px;
+  margin-left: 700px;
+  margin-right:70px;
+}
+@media (max-width:1543px){
+  .onta{
+    margin-left:600px;
+    margin-right:0px;
+  }
+}
+@media (max-width:1499px){
+  .onta{
+    margin-left:800px;
+  }
+}
+
+@media(max-width:1300px){
+  .Videol{
+    flex-wrap: wrap;
+  }
+  .onta{
+    margin-top:20px;
+    margin-left:20px;
+    width:87%;
+    max-width:1000px;
+    height:100px;
+  }
+}
+.onba{
+  margin-top:20px;
+  margin-left:20px;
+  padding:20px;
+  width:87%;
+  max-width:1000px;
+  border-radius: 3px;
+  cursor:pointer;
+  border:None;
+}
+@media screen and (max-width: 1300px) {
+  .camera {
+    height: 750px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .camera {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .camera {
+    height: 650px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .camera {
+    height: 550px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .camera {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .camera {
+    height: 400px;
+  }
+}
