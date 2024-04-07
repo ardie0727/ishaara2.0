@@ -6,6 +6,7 @@ import Services from './Services';
 import Translate from './Translate';
 import Try from './Tryitnow';
 import Features from './Features';
+import Pricing from "./Pricing";
 export {
     Navbar,
     Hero,
@@ -14,5 +15,6 @@ export {
     Services,
     Try,
     Features,
-    Translate
+    Translate,
+    Pricing
 }
