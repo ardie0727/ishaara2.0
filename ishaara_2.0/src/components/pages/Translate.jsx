@@ -13,6 +13,7 @@ function Translate() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   const [rbtn, setRbtn]=useState(false)
+  const [ubtn, setUbtn]=useState(false)
   const [str, setStr]=useState("");
   const id = useRef();
   const btn = useRef(false);
@@ -59,6 +60,8 @@ function Translate() {
   
 let holistic;
   useEffect(() => {
+    setUbtn(!ubtn)
+    if(ubtn){
     holistic = new Holistic({
       locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/holistic/${file}`
     });
@@ -81,7 +84,8 @@ let holistic;
       height: 480,
     });
     camera.start()
-  }, []);
+  }
+  }, [rbtn]);
 
   const start = () => {   
     setRbtn(true)
