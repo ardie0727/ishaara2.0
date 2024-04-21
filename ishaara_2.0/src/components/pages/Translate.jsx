@@ -2,8 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Webcam from "react-webcam";
 import { Camera } from "@mediapipe/camera_utils";
-import {HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
-// import { FACEMESH_TESSELATION, HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
+import { FACEMESH_TESSELATION, HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
 // import {HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
 import { drawConnectors } from '@mediapipe/drawing_utils';
 // import { drawConnectors, drawLandmarks } from '@mediapipe/drawing_utils';
@@ -14,9 +13,7 @@ function Translate() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   const [rbtn, setRbtn]=useState(false)
-  const [ubtn, setUbtn]=useState(false)
-  const [setStr]=useState("");
-  // const [str, setStr]=useState("");
+  const [str, setStr]=useState("");
   const id = useRef();
   const btn = useRef(false);
   const [responser, setResponse] = useState(null);
@@ -62,9 +59,6 @@ function Translate() {
   
 let holistic;
   useEffect(() => {
-    setUbtn(!ubtn)
-    if(ubtn){
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     holistic = new Holistic({
       locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/holistic/${file}`
     });
@@ -87,8 +81,7 @@ let holistic;
       height: 480,
     });
     camera.start()
-  }
-  }, [rbtn]);
+  }, []);
 
   const start = () => {   
     setRbtn(true)
@@ -176,7 +169,7 @@ let count=0
       <Webcam className='cam' ref={webcamRef}  /> 
       <canvas className='cam' ref={canvasRef}  />   
       </div>  
-      <textarea className='onta' placeholder='Translation...' defaultValue={responser}></textarea>
+      <textarea className='onta' placeholder='Translation...' defaultValue={str}></textarea>
     </div>
       <button className='onba' onClick={btn.current ? stop : start}>{rbtn ? "Stop" : "Start"}</button>    
     </>
