@@ -2,13 +2,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Webcam from "react-webcam";
 import { Camera } from "@mediapipe/camera_utils";
-import { FACEMESH_TESSELATION, HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
+import {HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
+// import { FACEMESH_TESSELATION, HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
 // import {HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
 import { drawConnectors } from '@mediapipe/drawing_utils';
 // import { drawConnectors, drawLandmarks } from '@mediapipe/drawing_utils';
 // import * as tf from '@tensorflow/tfjs';
 // import heroimg from './../../assets/hero.png'; 
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import {Footer} from "./";
+
 
 function Translate() {
   
@@ -35,10 +38,7 @@ function Translate() {
   
 let holistic;
   useEffect(() => {
-<<<<<<< HEAD
-=======
     
->>>>>>> 66b015f445f6e571fde828f45db32a841565c742
     holistic = new Holistic({
       locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/holistic/${file}`
     });
@@ -61,12 +61,8 @@ let holistic;
       height: 480,
     });
     camera.start()
-<<<<<<< HEAD
-  }, []);
-=======
   
   }, [rbtn]);
->>>>>>> 66b015f445f6e571fde828f45db32a841565c742
 
   const start = () => {   
     setRbtn(true)
@@ -153,9 +149,10 @@ let count=0
       <Webcam className='cam' ref={webcamRef}  /> 
       <canvas className='cam' ref={canvasRef}  />   
       </div>  
-      <textarea className='onta' placeholder='Translation...' defaultValue={str}></textarea>
+      <textarea className='onta' placeholder='Translation...' defaultValue={responser}></textarea>
     </div>
-      <button className='onba' onClick={btn.current ? stop : start}>{rbtn ? "Stop" : "Start"}</button>    
+      <button className='onba' onClick={btn.current ? stop : start}>{rbtn ? "Stop" : "Start"}</button>
+      <Footer/>    
     </>
   );
 }

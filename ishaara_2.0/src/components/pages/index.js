@@ -8,6 +8,8 @@ import Try from './Tryitnow';
 import Features from './Features';
 import Pricing from "./Pricing";
 import Model from "./Model";
+import Footer from "./Footer";
+
 export {
     Navbar,
     Hero,
@@ -18,5 +20,6 @@ export {
     Features,
     Translate,
     Pricing,
-    Model
+    Model,
+    Footer
 }

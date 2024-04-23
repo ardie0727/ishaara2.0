@@ -25,7 +25,7 @@ function Navbar1() {
               <Link to="/About" style={{ textDecoration: 'none', color: 'black' }}>About</Link>
             </Nav.Link>
             <Nav.Link>
-              <Link to="/Model" style={{ textDecoration: 'none', color: 'black' }}>Modal</Link>
+              <Link to="/Model" style={{ textDecoration: 'none', color: 'black' }}>Model</Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
