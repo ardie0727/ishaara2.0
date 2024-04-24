@@ -10,7 +10,6 @@ import { drawConnectors } from '@mediapipe/drawing_utils';
 // import * as tf from '@tensorflow/tfjs';
 // import heroimg from './../../assets/hero.png'; 
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import {Footer} from "./";
 
 
 function Translate() {
@@ -152,7 +151,6 @@ let count=0
       <textarea className='onta' placeholder='Translation...' defaultValue={responser}></textarea>
     </div>
       <button className='onba' onClick={btn.current ? stop : start}>{rbtn ? "Stop" : "Start"}</button>
-      <Footer/>    
     </>
   );
 }
