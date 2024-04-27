@@ -3,13 +3,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import Webcam from "react-webcam";
 import { Camera } from "@mediapipe/camera_utils";
 import {HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import { drawConnectors } from '@mediapipe/drawing_utils';
 // import { FACEMESH_TESSELATION, HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
 // import {HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
-import { drawConnectors } from '@mediapipe/drawing_utils';
 // import { drawConnectors, drawLandmarks } from '@mediapipe/drawing_utils';
 // import * as tf from '@tensorflow/tfjs';
 // import heroimg from './../../assets/hero.png'; 
-import { GoogleGenerativeAI } from "@google/generative-ai";
 
 
 function Translate() {
@@ -17,6 +17,7 @@ function Translate() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   const [rbtn, setRbtn]=useState(false)
+  // const [str, setStr]=useState("");
   const [str, setStr]=useState("");
   const id = useRef();
   const btn = useRef(false);
