@@ -97,7 +97,7 @@ const Translate = () => {
       }
       
       console.log(counter.current)
-      if (counter.current==30) {
+      if (counter.current==12) {
         counter.current=0
         geminiNeta(res);
       }
@@ -206,10 +206,8 @@ const Translate = () => {
         />
       </div>
       <div >
-        <div className="detect">
-          <h4>Translation...</h4>
-          <p>{detectedVariables}</p>
-          <p>{responser}</p>
+      <div className="detect">
+          <textarea className='textareab'defaultValue={responser} placeholder="Translation..."></textarea>
         </div>
       </div>
       </div>
